@@ -18,9 +18,28 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute top-0 right-0 w-1/2 h-4/5 bg-gradient-to-br from-navy-50/80 via-navy-100/40 to-transparent rounded-bl-[5rem] blur-3xl transform -translate-y-24 translate-x-24"></div>
         <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-gold-100/50 to-transparent rounded-tr-[5rem] blur-3xl transform translate-y-20 -translate-x-20"></div>
+        
+        {/* Hero Image */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-1/2 h-3/4 lg:block hidden">
+            <div className="relative w-full h-full">
+              <img 
+                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1772&q=80" 
+                alt="Professional accounting services" 
+                className="object-cover w-full h-full rounded-l-3xl shadow-2xl"
+                style={{
+                  clipPath: "polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                  objectPosition: "center"
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-navy-900/70 to-transparent rounded-l-3xl mix-blend-multiply"></div>
+              <div className="absolute inset-0 rounded-l-3xl border-l border-t border-b border-white/10"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="container-custom grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="container-custom grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         <div className="space-y-6 animate-fade-in">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-navy-900">
             Expert Accounting & Tax Services in Annapolis
@@ -42,7 +61,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
           </div>
         </div>
 
-        <div className="glass-card rounded-2xl p-8 mx-auto max-w-md animate-fade-in" style={{ animationDelay: "0.2s" }}>
+        <div className="glass-card rounded-2xl p-8 mx-auto max-w-md animate-fade-in lg:z-10" style={{ animationDelay: "0.2s" }}>
           <h3 className="text-2xl font-bold text-navy-800 mb-6">Get Financial Clarity</h3>
           <form className="space-y-4">
             <div>
